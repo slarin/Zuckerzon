@@ -1,0 +1,46 @@
+<style>
+  body {
+    background: #000000;
+  }
+  #footer {
+    padding: 2em 0;
+  }
+</style>
+<!-- Header -->
+<header class="header">
+  <a href="/" class="logo">ZuckerZon</a>
+  <nav id="nav">
+    <!--<a href="index.html">HOME</a>-->
+    <a href="/">HOME</a>
+  </nav>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+<section id="footer">
+  <div class="inner">
+    <header>
+      <h2>sign in</h2>
+    </header>
+    <%- include ('./partials/msg') %>
+    <form method="post" action="/users/sign-in">
+      <div class="field half first">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required/>
+      </div>
+      <div class="field half">
+        <label for="message">password</label>
+        <input type="password" name="password" id="password" required/>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="sign in" class="alt" /></li>
+      </ul>
+    </form>
+    <div class="field half">
+      <label for="message"></label>
+      <button class="button alt" onclick="location.href='/users/auth/google';">sign up with google</button>
+    </div>
+    <div class="field half">
+        <label for="message"></label>
+        <button class="button alt" onclick="location.href='/users/auth/facebook';">sign up with facebook</button>
+    </div>
+  </div>
+</section>

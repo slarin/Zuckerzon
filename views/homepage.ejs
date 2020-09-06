@@ -1,0 +1,145 @@
+<!-- Header -->
+<header class="header">
+  <a href="/" class="logo">ZuckerZon</a>
+  <nav id="nav">
+    <!--<a href="index.html">HOME</a>-->
+    <a href="/users/sign-in">SIGN IN</a>
+  </nav>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+<!-- Banner -->
+<section id="banner">
+  <div class="inner">
+    <h1>ZuckerZon</h1>
+    <h3>Smart Drone Deliveries - Anywhere, Anytime.</h3>
+    <ul class="actions">
+      <li><a href="#footer" class="button alt">SIGN UP</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- One -->
+<section id="one">
+  <div class="inner">
+    <header>
+      <h2>Fast response, Accurate deliveries</h2>
+    </header>
+    <p>The distance between you and any of your customers is a straight line through the sky.<br>
+       No traffic. No unnecessary stops. No mishaps.<br>
+       Get your products to your customers as quickly as possible.</p>
+    <ul class="actions">
+      <li><a href="#footer" class="button alt">Get Started</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Two -->
+<section id="two">
+  <div class="inner">
+    <article>
+      <div class="content">
+        <header>
+          <h3>Moneyback Guarantee</h3>
+        </header>
+        <div class="image fit">
+          <img src="images/pic01.jpg" alt="" />
+        </div>
+        <p>Yes, we are that confident. Set your stopwatches.<br> 
+          Every product we fail to deliver on time, you get your money back.<br>
+          We guarantee it.</p>
+      </div>
+    </article>
+    <article class="alt">
+      <div class="content">
+        <header>
+          <h3>We Are Ubiquitus</h3>
+        </header>
+        <div class="image fit">
+          <img src="images/pic04.jpg" alt="" />
+        </div>
+        <p>It doesn't matter where your customers are<br>
+           - Getting sand in tight places or standing in line at Starbucks -<br>
+           We'll find them.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Three -->
+<section id="three">
+  <div class="inner">
+    <article>
+      <div class="content">
+        <span class="icon fa-rocket"></span>
+        <header>
+          <h3>Extremely Fast</h3>
+        </header>
+        <p>0 to 60mph in less time than anything that has to deal with traffic.</p>
+        
+      </div>
+    </article>
+    <article>
+      <div class="content">
+        <span class="icon fa-history"></span>
+        <header>
+          <h3>Available Anytime</h3>
+        </header>
+        <p>Evil does not rest and neither do our drones.</p>
+        
+      </div>
+    </article>
+    <article>
+    <div class="content">
+        <span class="icon fa-mobile"></span>
+        <header>
+          <h3>Wherever You Go</h3>
+        </header>
+        <p>We are in your phone. With you wherever.</p>
+        
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Footer -->
+<section id="footer">
+  <div class="inner">
+    <header>
+      <h2>SIGN UP FOR DRONE DELIVERIES</h2>
+    </header>
+    <%- include ('./partials/msg') %>
+    <form method="post" action="/users/register">
+      <div class="field half first">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required/>
+      </div>
+      <div class="field half">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required/>
+      </div>
+      <div class="field half first">
+        <label for="message">password</label>
+        <input type="password" name="password" id="password" required/>
+      </div>
+      <div class="field half">
+        <label for="message">confirm password</label>
+        <input type="password" name="password2" id="password2" required/>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="sign up" class="alt" /></li>
+      </ul>
+    </form>
+    <div class="field half">
+        <label for="message"></label>
+        <button class="button alt" onclick="location.href='/users/auth/google';">sign up with google</button>
+    </div>
+    <div class="field half">
+        <label for="message"></label>
+        <button class="button alt" onclick="location.href='/users/auth/facebook';">sign up with facebook</button>
+    </div>
+    <div class="copyright">
+      &copy; ZuckerZon Design based off: <a href="https://templated.co/">Instropect</a>. Images: <a href="https://unsplash.com/">Unsplash</a>
+    </div>
+  </div>
+</section>
