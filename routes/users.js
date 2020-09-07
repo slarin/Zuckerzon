@@ -49,21 +49,20 @@ router.post('/register', (req, res) => {
             password2
           });
         } else {
-            const newUser = new People({
-              name,
-              email,
-              password
-            });
-           
+            const newUser = new People();
+                  newUser.local.name = name;
+                  newUser.local.email = email;
+                  newUser.local.password = password;
+            
            //Password
            bcrypt.genSalt(10, (err, salt) => 
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
+            bcrypt.hash(newUser.local.password, salt, (err, hash) => {
              if(err) throw err;
 
-             newUser.password = hash;
+             newUser.local.password = hash;
              newUser.save()
               .then(user => {
-                req.flash('success_msg', 'You have been registered! Log in.');
+                req.flash('success_msg', 'You have been registered! Sign in.');
                 res.redirect('/users/sign-in');
               })
               .catch(err => console.log(err));

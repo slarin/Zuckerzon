@@ -13,14 +13,14 @@ const User = require('../models/User');
   passport.use(
     new LocalStrategy({ usernameField: 'email'}, (email, password, done) => {
       //match user
-      User.findOne({ email: email})
+      User.findOne({ 'local.email': email})
         .then(user => {
           if(!user) {
             return done(null, false, { message: 'That email is not registered'});
           }
 
           // match password
-          bycrypt.compare(password, user.password, (err, isMatch)=>{
+          bycrypt.compare(password, user.local.password, (err, isMatch)=>{
             if(err) throw err;
 
             if(isMatch) {

@@ -3334,13 +3334,11 @@
 /* Banner */
 
 	#banner {
-		background-color: #002f5b;
 		padding: 13em 0 11em 0;
 		background-color: #0c0c0c;
-		background-image: url("../../images/banner-img.jpg");
+		background-image: url("/images/banner-img.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
-		
 		text-align: left;
 		position: relative;
 		z-index: 9999;
@@ -3444,10 +3442,10 @@
 			}
 
 		#banner:after {
-			-moz-transition: opacity 4s ease;
-			-webkit-transition: opacity 4s ease;
-			-ms-transition: opacity 4s ease;
-			transition: opacity 4s ease;
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
 			content: '';
 			position: absolute;
 			width: 100%;
@@ -3456,7 +3454,7 @@
 			top: 0;
 			left: 0;
 			background-color: #0c0c0c;
-			opacity: 0.25;
+			opacity: 0.3;
 		}
 
 		#banner .inner {
@@ -3464,6 +3462,7 @@
 			width: calc(100% - 6em);
 			margin: 0 auto;
 			position: relative;
+			left: 0;
 			z-index: 10000;
 			line-height: 1.5;
 		}
@@ -3471,8 +3470,9 @@
 			@media screen and (max-width: 480px) {
 
 				#banner .inner {
-					max-width: 90%;
-					width: 90%;
+					max-width: 70%;
+					width: 60%;
+					margin: 2em 2em 0 2em;
 				}
 
 			}
@@ -3526,6 +3526,7 @@
 
 			#banner {
 				padding: 4em 0 2em 0;
+				min-height: 60vh;
 			}
 
 				#banner h1 {
@@ -3554,8 +3555,12 @@
 
 	#one {
 		padding: 6em 0 4em 0;
-		background-image: url(/images/quad-background.png);
 		background-size: cover;
+	}
+
+	#one .inner p {
+		color: #1c1c1c;
+		font-weight: 600;
 	}
 
 		@media screen and (max-width: 980px) {
@@ -3597,6 +3602,11 @@
 
 			#two .inner article {
 				width: 50%;
+			}
+
+			#two .inner article p {
+				color: #424242;
+				font-weight: 600;
 			}
 
 				#two .inner article:first-child {
@@ -3650,7 +3660,6 @@
 
 	#three {
 		padding: 6em 0 4em 0;
-		background-image: url(/images/quad-background.png);
 		background-size: cover;
 	}
 
@@ -3677,7 +3686,8 @@
 			}
 
 				#three .inner article p {
-					color: #000000;
+					color: #1c1c1c;
+					font-weight: 600;
 				}
 
 				#three .inner article .icon {
